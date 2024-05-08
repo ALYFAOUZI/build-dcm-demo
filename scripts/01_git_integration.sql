@@ -1,12 +1,12 @@
 --- -----------------------------------------------------------------------
  --Step #1 : Create a Secret to Store the GitHub PAT
 -- ------------------------------------------------------------------------
-CREATE OR REPLACE SECRET FAOUZI_GITHUB_SECRET
+CREATE OR REPLACE SECRET BRAJAGOPAL_GITHUB_SECRET
 TYPE = PASSWORD
-USERNAME = 'github-user-name'
-PASSWORD = 'github-access-token';
+USERNAME = 'sfc-gh-brajagopal'
+PASSWORD = 'BGN9vwh6cnv5xqn-xfv';
 
-show secrte;
+show secret;
 
 DESCRIBE SECRET FAOUZI_GITHUB_SECRET;
 
