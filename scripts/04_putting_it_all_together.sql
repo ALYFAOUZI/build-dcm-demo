@@ -28,7 +28,7 @@ ALER GIT REPOSITORY DEMO_REPO FETCH ;
 --APPLY THE NEW CHANGES declaratively
 EXECUTE IMMEDIATE FROM @DEMO_REPO/branches/main/snowflake_objects/databases/demo_db/schemas/tables/my_inventory.sql 
 DESCRIBE TABLE MY_INVENTORY;
-SELECT * FROM MY_INVENTORYl;
+SELECT * FROM MY_INVENTORY;
 
 
 
