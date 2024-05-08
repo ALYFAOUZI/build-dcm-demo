@@ -49,7 +49,7 @@ DESCRIBE GIT REPOSITORY DEMO_REPO;
 --For Example a branch Name, a tag name or a valid commit hash
 -- Commit hashes are between 6 and 40 characters long.
 
-LIST @DEMO_REPO/brances/main;
+LIST @DEMO_REPO/brances/;
 LIST @DEMO_REPO/brances/tag_name;
 LIST @DEMO_REPO/commits;
 
