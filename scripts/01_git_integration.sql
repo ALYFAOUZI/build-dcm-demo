@@ -51,7 +51,7 @@ DESCRIBE GIT REPOSITORY DEMO_REPO;
 
 LIST @DEMO_REPO/brances/main;
 LIST @DEMO_REPO/brances/tag_name;
-LIST @DEMO_REPO/brances/commit_hash;
+LIST @DEMO_REPO/commits;
 
 
 --Show commands
