@@ -6,40 +6,40 @@ TYPE = PASSWORD
 USERNAME = 'sfc-gh-brajagopal'
 PASSWORD = 'BGN9vwh6cnv5xqn-xfv';
 
-show secret;
+show secrets;
 
-DESCRIBE SECRET FAOUZI_GITHUB_SECRET;
+DESCRIBE SECRET BRAJAGOPAL_GITHUB_SECRET;
 
 --- -----------------------------------------------------------------------
  --Step #2 : Create a Git API Integration
 -- ------------------------------------------------------------------------
-CREATE OR REPLACE API INTEGRATION FAOUZI_GITHUB_API_INTEGRATION
+CREATE OR REPLACE API INTEGRATION BRAJAGOPAL_GITHUB_API_INTEGRATION
 API_PROVIDER = GIT_HTTPS_API
-API_ALLOWED_PREFIXES = ('https://github.com/ALYFAOUZI')
-ALLOWED_AUTHENTICATION_SECRETS = (FAOUZI_GITHUB_SECRET)
+API_ALLOWED_PREFIXES = ('https://github.com/sfc-gh-brajagopal')
+ALLOWED_AUTHENTICATION_SECRETS = (BRAJAGOPAL_GITHUB_SECRET)
 ENABLED = TRUE;
 
 SHOW INTEGRATIONS;
 SHOW API INTEGRATIONS;
 
-DESCRIBE API INTEGRATION FAOUZI_GITHUB_API_INTEGRATION;
+DESCRIBE API INTEGRATION BRAJAGOPAL_GITHUB_API_INTEGRATION;
 
 --- -----------------------------------------------------------------------
  --Step #3 : Create a Git Repository
 -- ------------------------------------------------------------------------
 
 CREATE OR REPLACE GIT REPOSITORY DEMO_REPO
-API_INTEGRATION = FAOUZI_GITHUB_API_INTEGRATION
-GIT_CREDENTIALS = FAOUZI_GITHUB_SECRET
-origin ='https://github.com/ALYFAOUZI/build-dcm-demo.git';
+API_INTEGRATION = BRAJAGOPAL_GITHUB_API_INTEGRATION
+GIT_CREDENTIALS = BRAJAGOPAL_GITHUB_SECRET
+origin ='https://github.com/sfc-gh-brajagopal/build-dcm-demo.git';
 
 SHOW GIT REPOSITORIES;
 
 DESCRIBE GIT REPOSITORY DEMO_REPO;
 
-GRANT READ ON GIT REPOSITORY DEMO_REPO TO ROLE DEMO_ROLE;
+--GRANT READ ON GIT REPOSITORY DEMO_REPO TO ROLE DEMO_ROLE;
 
-USE ROLE DEMO_ROLE;
+--USE ROLE DEMO_ROLE;
 
 
 --- -----------------------------------------------------------------------
@@ -60,18 +60,3 @@ SHOW GIT TAGS IN DEMO_REPO;
 
 -- Fetch new changes
 ALTER GIT REPOSITORY DEMO_REPO FETCH;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
