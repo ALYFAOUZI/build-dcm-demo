@@ -4,7 +4,7 @@
 CREATE OR REPLACE SECRET BRAJAGOPAL_GITHUB_SECRET
 TYPE = PASSWORD
 USERNAME = 'sfc-gh-brajagopal'
-PASSWORD = 'BGN9vwh6cnv5xqn-xfv';
+PASSWORD = 'xxxxxxxxxxxxxx;
 
 show secrets;
 
